@@ -1,0 +1,17 @@
+- name: gcode
+  img: gcode.png
+  alt: G-code
+  title: Rich G-code Dialect
+  link: meta/gcode/
+
+- name: ctrlboard
+  img: boards.jpg
+  alt: Controller Board
+  title: Supports AVR and ARM
+  link: docs/hardware/boards.html
+
+- name: inductiveprobe
+  img: probe.jpg
+  alt: Inductive Probe
+  title: Automatic Bed Leveling
+  link: docs/features/auto_bed_leveling.html

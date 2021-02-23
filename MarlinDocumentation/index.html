@@ -1,0 +1,106 @@
+---
+permalink:    /
+title:        'Home'
+description:  'Marlin Firmware - A really good 3D printer driver.'
+category:     [ default ]
+---
+
+<div class="custom-tagline">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-7">
+        <h1>Marlin Firmware</h1>
+        <h2 id="tagline">Open Source 3D Printer Driver</h2>
+        <p class="text-justify">First created in 2011 for RepRap and Ultimaker by <a href="//github.com/ErikZalm">Erik van der Zalm</a> et. al., today Marlin drives most of the world's 3D printers. Reliable and precise, Marlin delivers outstanding print quality while keeping you in full control of the process.</p>
+        <p>As an <a href="//opensource.org/">Open Source</a> project hosted on <a href="//github.com/">Github</a>, Marlin is owned and maintained by the maker community. <a href="/docs/development/contributing.html">Learn how you can contribute!</a></p>
+      </div>
+      <div class="col-sm-12 col-md-5 custom-tagline-btn">
+        <p><a class="btn btn-success btn-block btn-lg" href="{{ '/docs/basics/introduction.html' }}" role="button">
+          <em class="fa fa-book fa-1x" aria-hidden="true"></em>&nbsp; Learn more</a></p>
+        <p><a class="btn btn-primary btn-block btn-lg" href="{{ '/docs/development/contributing.html' }}" role="button">
+          <em class="fa fa-user fa-1x" aria-hidden="true"></em>&nbsp; Contribute</a></p>
+        <p><a class="btn btn-info btn-block btn-lg" href="{{ '/meta/download/' }}" role="button">
+          <em class="fa fa-download fa-1x" aria-hidden="true"></em>&nbsp; Download</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% capture tiles %}
+  <div class="custom-tile">
+    <div class="container">
+      <div class="row">
+        {% for feature in site.data.features %}
+          <div class="col-sm-4">
+            <div class="custom-tile-image-wrapper">
+              <a href="{{ feature.link }}">
+              <div class="custom-tile-image-block" style="background: url({{ '/assets/images/features/' | append: feature.img }}) no-repeat center top; background-size: cover;">
+                <div class="custom-tile-image-legend">
+                  {{ feature.title }}
+                  <em class="fa fa-arrow-circle-right fa-1x" aria-hidden="true"></em>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endcapture %}
+
+{% capture discord %}
+  <div class="home-discord">
+    <h3>A helpful user community!</h3>
+    <iframe src="https://discordapp.com/widget?id=461605380783472640&theme=light" width="350" height="340" allowtransparency="true" frameborder="0"></iframe>
+  </div>
+{% endcapture %}
+
+<div id="marlin-carousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item">
+      <img src="/assets/images/carousel/marlin-outrun-slide.jpg" alt="Marlin - Outrun" />
+    </div>
+    <div class="item active">{{ tiles }}</div>
+    <div class="item">
+      <img src="/assets/images/carousel/what_is_marlin_slide.png" alt="What is Marlin?" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/carousel/carousel-code.jpg" alt="The codes" />
+    </div>
+    <div class="item">{{ tiles }}</div>
+    <div class="item">
+      <img src="/assets/images/carousel/banner-01.jpg" alt="Marlin in action" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/carousel/example-450.jpg" alt="Printing with Marlin" />
+    </div>
+    <div class="item">{{ tiles }}</div>
+    <div class="item">
+      <img src="/assets/images/carousel/controller.jpg" alt="LCD Menu Controls" />
+    </div>
+  </div>
+</div>
+
+<script language="javascript"><!--
+  // <![CDATA[
+  var taglines = [
+    "The code that makes the things",
+    "Printing things since 2011",
+    "The firmware we all trust",
+    "Heating, moving, making, grooving",
+    "Responsive, Reliable, Accurate",
+    "Fabricating Fused Filament",
+    "Fused Deposition Engine",
+    "Build It Your Way",
+    "Open Source RepRap Driver",
+    "Heating, moving, making, grooving",
+    "Deterministic deposition engine",
+    "A really good 3D printer driver",
+    "Motors & heaters & sensors, oh my!",
+    "Stepper Motor Repurposer"
+  ],
+  tagline = taglines[Math.floor(Math.random()*taglines.length)];
+  document.getElementById('tagline').innerText = tagline;
+  // ]]>
+</script>
